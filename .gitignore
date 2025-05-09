@@ -66,3 +66,21 @@ jest-html-reporters-*
 # Docker
 **/docker-compose.override.yml
 **/docker-compose.local.yml
+
+# Added by Claude Task Master
+logs
+dev-debug.log
+# Dependency directories
+.env
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+# OS specific
+# Task files
+tasks.json
+tasks/ 

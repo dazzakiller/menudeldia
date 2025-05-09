@@ -1,0 +1,82 @@
+Menu Del Dia - Product Requirements (PRD)
+
+## Project Overview
+Menu Del Dia is a mobile-first platform that connects diners with authentic, affordable daily lunch specials ("menu del día") in Spanish restaurants. The platform enables restaurants to upload and manage daily menus, while providing diners with a location-based discovery tool to find quality meals at great prices. The app supports both Spanish and English.
+
+## Target Users
+- Local office workers
+- International tourists
+- Restaurant owners (small/medium)
+- Expat residents
+- Food enthusiasts
+
+## Tech Stack
+- Mobile: React Native (Expo), NativeWind, React Native Paper, i18next, Expo Location, React Navigation
+- Web: React.js (Next.js), TailwindCSS, React Query, React Hook Form, Recharts
+- Backend: Supabase (PostgreSQL, PostGIS, Auth, Storage, Realtime, Edge Functions)
+- DevOps: GitHub, GitHub Actions, Expo EAS, Docker, Coolify, Nginx
+
+## Core Functional Requirements
+1. User Authentication & Profiles
+   - Social login (Google, Apple), email/password
+   - Role-based access: diner, restaurant owner, admin
+   - Profile management (name, photo, language, dietary preferences)
+2. Restaurant Discovery
+   - GPS-based search for nearby restaurants
+   - Map and list views
+   - Filtering (distance, price, cuisine, rating)
+   - Search by name/location
+3. Menu Management
+   - Daily menu creation and updates (web/mobile)
+   - Menu templates for recurring items
+   - Photo upload for dishes
+   - Price and dietary info
+   - Real-time updates and notifications
+4. Multilingual Support
+   - Full UI in Spanish and English
+   - Menu item translation
+   - Language preference detection and selection
+5. Reviews & Ratings
+   - Star ratings, written reviews, photo uploads
+   - Menu-specific and restaurant-wide ratings
+   - Moderation and owner responses
+6. Analytics & Reporting
+   - Restaurant analytics dashboard (views, menu stats, demographics)
+   - Platform analytics (user growth, feature usage)
+7. Subscription & Monetization
+   - Free and premium diner access
+   - Restaurant listing and enhanced features (future)
+8. Accessibility & Compliance
+   - WCAG 2.1 AA, GDPR, App Store/Play Store compliance
+   - Responsive, mobile-first design
+
+## User Journeys
+- Diner: Register/login → Set preferences → Discover restaurants → Browse menus → Visit restaurant → Leave review
+- Restaurant Owner: Register → Set up profile → Create menu templates → Publish daily menu → Engage with customers → Analyze performance
+
+## Non-Functional Requirements
+- Fast performance (startup <2s, search <1s)
+- Secure authentication and data handling
+- Scalable to 50,000+ users
+- 99.9% uptime, automated backups
+- Multi-environment support (dev, staging, prod)
+
+## Data Models (Key Entities)
+- User (id, email, role, auth provider)
+- Diner Profile (user_id, name, photo, language, dietary prefs, favorites)
+- Restaurant (owner_id, name, address, coordinates, contact, hours, cuisines, photos, rating)
+- Menu Template (restaurant_id, name, items)
+- Daily Menu (restaurant_id, date, starters, mains, desserts, price, available)
+- Review (user_id, restaurant_id, daily_menu_id, rating, comment, photos, visit_date)
+
+## API Endpoints (Examples)
+- /auth/register, /auth/login, /auth/social-login
+- /restaurants, /restaurants/nearby, /restaurants/:id
+- /restaurants/:id/menus, /restaurants/:id/templates
+- /restaurants/:id/reviews
+
+## Testing & Deployment
+- Automated unit, integration, and E2E tests
+- CI/CD with GitHub Actions, Expo EAS
+- Staging and production environments
+- Monitoring, error tracking, and backups
