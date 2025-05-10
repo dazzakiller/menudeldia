@@ -4,6 +4,7 @@
 
 - [2025-05-09 19:39:21] Subtask 1.2 completed: Scaffolded Expo (mobile) and Next.js (web) apps in `mobile/` and `web/` directories. Both apps start without errors. See [Mobile and Web App Setup](mdc:__project-docs/docs-and-snipets/setup-mobile-web.md) for details.
 - [2025-05-09 19:55:00] Subtask 1.3 completed: Installed and configured TailwindCSS, NativeWind, and React Native Paper for web and mobile. Verified with sample components. See [Styling and UI Libraries Setup](mdc:__project-docs/docs-and-snipets/styling-ui-libraries-setup.md) for details.
+- [2025-05-10 16:25:00] Task 1.4 (in progress): Bootstrapped i18next, React Navigation, and Supabase integration for both web and mobile platforms. All core packages installed, initial configuration files created, and environment variables set up. See [Core Functionality and Services Integration](mdc:__project-docs/docs-and-snipets/core-functionality-and-services-integration.md) for details.
 
 ## Leaving point
 
