@@ -5,10 +5,14 @@ import { StatusBar } from 'expo-status-bar';
 import 'react-native-reanimated';
 import { PaperProvider } from 'react-native-paper';
 import "nativewind/tailwind.css";
+import AppNavigator from '../navigation';
+// import i18next setup here (to be implemented)
+// import Supabase client setup here (to be implemented)
 
 import { useColorScheme } from '@/hooks/useColorScheme';
+import { ReactNode } from 'react';
 
-export default function RootLayout() {
+export default function RootLayout({ children }: { children: ReactNode }) {
   const colorScheme = useColorScheme();
   const [loaded] = useFonts({
     SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
@@ -28,6 +32,8 @@ export default function RootLayout() {
         </Stack>
         <StatusBar style="auto" />
       </ThemeProvider>
+      <AppNavigator />
+      {children}
     </PaperProvider>
   );
 }
